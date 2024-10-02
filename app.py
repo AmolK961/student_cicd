@@ -10,6 +10,11 @@ app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
 
+
+@app.route("/message", methods=['POST'])
+def message():
+    return "Hell from Circle cicd Flask App"
+
 def scale(payload):
     """Scales Payload"""
 
